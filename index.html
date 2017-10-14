@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            packages: {
+                'muse-js': {
+                    defaultJSExtensions: true,
+                    main: 'muse.js',
+                },
+                'rxjs': {
+                    defaultJSExtensions: true,
+                }
+            },
+            map: {
+                'rxjs': 'node_modules/rxjs/',
+                'muse-js': 'node_modules/muse-js/dist'
+            }
+        });
+        SystemJS.import('main.js');
+    </script>    
+</head>
+
+<body>
+    <h1>Muse + SystemJS Minimal Setup</h1>
+
+    Go write some code!
+</body>
+
+</html>
