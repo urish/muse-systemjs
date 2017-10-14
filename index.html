@@ -1,31 +1,45 @@
 <html>
 
 <head>
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script>
-        System.config({
-            packages: {
-                'muse-js': {
-                    defaultJSExtensions: true,
-                    main: 'muse.js',
-                },
-                'rxjs': {
-                    defaultJSExtensions: true,
-                }
-            },
-            map: {
-                'rxjs': 'node_modules/rxjs/',
-                'muse-js': 'node_modules/muse-js/dist'
-            }
-        });
-        SystemJS.import('main.js');
-    </script>    
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script>
+    System.config({
+      packages: {
+        'muse-js': {
+          defaultJSExtensions: true,
+          main: 'muse.js',
+        },
+        'rxjs': {
+          defaultJSExtensions: true,
+        }
+      },
+      map: {
+        'rxjs': 'node_modules/rxjs/',
+        'muse-js': 'node_modules/muse-js/dist'
+      }
+    });
+    SystemJS.import('main.js');
+  </script>
+  <style>
+    .eye {
+      font-size: 64px;
+    }
+
+    .eye.blink {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Muse + SystemJS Minimal Setup</h1>
+  <h1>Muse + SystemJS Minimal Setup</h1>
 
-    Go write some code!
+  <button onclick="connect()">Connect</button>
+  <button onclick="connectBulb()">Bulb!</button>
+
+  <div class="eye">
+    👁
+  </div>
 </body>
 
 </html>
